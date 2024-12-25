@@ -13,7 +13,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
 
     steps:
     - uses: actions/checkout@v4
@@ -24,9 +24,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build -r win-x64 --no-restore
+      run: dotnet build --no-restore
     - name: Test
-      run: dotnet test -r win-x64 --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.5.0
       with:
