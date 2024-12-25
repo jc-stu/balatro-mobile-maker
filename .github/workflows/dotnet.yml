@@ -31,5 +31,4 @@ jobs:
       uses: actions/upload-artifact@v4.5.0
       with:
         name: balatro-mobile-maker
-        path: |
-          bin/*
+        path: .
